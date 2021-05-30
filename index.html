@@ -1,21 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8">
-<title>Page Title</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
+<html>
+<head>
+
+
 <style>
+* {box-sizing: border-box;}
+
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
 </style>
-<script src=""></script>
+</head>
 <body>
+<table>
+<p>Hover over the image to see the price.</p>
+<h2>Tools</h2>
 
-<img src="123.png" alt="LA" style="width:100%">
-
-<div class="">
- <h1>This is a Heading</h1>
- <p>This is a paragraph.</p>
- <p>This is another paragraph.</p>
+<tr>
+<td>
+<div class="container">
+  <img src="C:\Users\nilesh_zarkar\Downloads\tropolite.jpg" alt="Avatar" class="image">
+  <div class="overlay">Rs.12</div>
 </div>
-
+</td>
+<td>
+<div class="container">
+  <img src="C:\Users\nilesh_zarkar\Downloads\hammer.jpg" alt="Avatar" class="image">
+  <div class="overlay">Rs.20</div>
+</div>
+</td>
+<td>
+<div class="container">
+  <img src="C:\Users\nilesh_zarkar\Downloads\cherries.jpg" alt="Avatar" class="image">
+  <div class="overlay">Rs.28</div>
+</div>
+</td>
+</tr>
+</table>
 </body>
 </html>
